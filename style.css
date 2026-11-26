@@ -5,8 +5,12 @@
     box-sizing: border-box;
 }
 
+button {
+    cursor: pointer;
+}
+
 body {
-    background: hsl(217, 28%, 15%);
+    background: hwb(217 11% 81%);
     font-size: 14px;
     font-family: "open sans", sans-serif;
     line-height: 1.5;
@@ -14,9 +18,48 @@ body {
 
 header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 40px 60px;
     font-family: "Open Sans", serif;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-menu-content{
+    max-width: 100%;
+    display: none;
+    position: absolute;
+    background-color: rgba(51, 158, 204, 0.5);
+    color: #fff;
+    font-size: 16px;
+    font-family: "open sans", sans-serif;
+    padding: 30px 20px;
+
+    width: 90%;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, 20%);
+    text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.mobile-menu-content ol li{
+    list-style-type: none;
+    margin-top: 20px;
+}
+.mobile-menu-content ol{
+    padding: 0px 60px;
+}
+.mobile-menu-content img{
+    width: 20px;
+}
+.mobile-menu-content div{
+    display: flex;
+    justify-content: end;
 }
 
 header img{
@@ -39,7 +82,7 @@ nav ul li{
 
 .hero{
     text-align: center;
-    background: url(../fylo-dark-theme-landing-page-master/images/bg-curvy-desktop.svg);
+    background: url(assets/images/bg-curvy-desktop.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -191,8 +234,9 @@ nav ul li{
 
 .testimonial-quote {
     position: absolute;
-    top: 5%;
-    right: 88.7%;
+    top: 6%;
+    left: 10%;
+    transform: translate(10%, -6%);
 }
 
 .testimonials .container {
@@ -248,7 +292,7 @@ nav ul li{
 }
 
 .call-to-action .container {
-    width: 70%;
+    width: 80%;
     background-color: hsl(217, 28%, 15%);
     color: white;
     text-align: center;
@@ -387,36 +431,7 @@ nav ul li{
     margin-bottom: 20px;
 }
 
-.mobile-menu{
-    display: none;
-}
-.mobile-menu-content{
-    display: none;
-    position: absolute;
-    background-color: rgb(128, 125, 125);
-    color: black;
-    padding: 30px 20px;
-    width: fit-content;
-    height: 200px;
-    right: -20px;
-    top: -50px;
-}
 
-.mobile-menu-content ol li{
-    list-style-type: none;
-    margin-top: 20px;
-}
-.mobile-menu-content ol{
-    padding: 0px 60px;
-}
-.mobile-menu-content img{
-    width: 20px;
-}
-.mobile-menu-content div{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-}
 
 @media (max-width:1440px) {
     .stay-productive .text-box h4 {
@@ -433,7 +448,7 @@ nav ul li{
         position: relative;
     }
 
-    /* header nav ul{
+    header nav ul{
         display: none
     }
 
@@ -445,7 +460,11 @@ nav ul li{
 
     header nav{
         position: relative;
-    } */
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
 
     .hero img{
         width: 100%;
@@ -474,24 +493,34 @@ nav ul li{
     }
 
     .stay-productive .text-box p {
-        /* font-size: 16px; */
         line-height: 1.6;
     }
 
+    .testimonial-quote {
+        top: 2%;
+        left: 15%;
+        transform: translate(15%, 2%);
+    }
+
     .testimonials .container {
-        width: 100%;
         display: grid;
         gap: 30px;
         padding: 0px 10px;
     }
 
-    .testimonial-quote {
-        top: 2%;
-        right: 84%;
+    .call-to-action .container .cta-form input {
+        width: 100%;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 20px;
     }
 
-    .call-to-action .container {
-        width: 90%;
+    .call-to-action .container .cta-form input::placeholder {
+        text-align: center;
+    }
+
+    .call-to-action .container .cta-form button {
+        width: 100%;
     }
 
     .footer .container {
@@ -517,25 +546,6 @@ nav ul li{
 
     body {
         font-size: 12px;
-    }
-
-     header nav ul{
-        display: none
-    }
-
-    .mobile-menu{
-        display: block;
-        width: 30px;
-        cursor: pointer;
-    }
-
-    header nav{
-        position: relative;
-    }
-   
-    
-    .hero{
-        padding: 40px 30px;
     }
 
     .hero h3 {
@@ -570,6 +580,7 @@ nav ul li{
     }
 
     .testimonials .container {
+        width: 100%;
         padding: 0px 30px;
     }
 
@@ -588,38 +599,12 @@ nav ul li{
         top: 4%;
     }
 
-    .call-to-action {
-        padding: 150px 40px 100px 40px;
-    }
-
     .call-to-action .container {
         width: 90%;
-        padding: 40px 20px;
-    }
-
-    .call-to-action .container h4 {
-        font-family: "Raleway", sans-serif;
-        font-size: 18px;
-    }
-
-    .call-to-action .container .cta-form {
-        gap: 25px;
-    }
-
-    .call-to-action .container .cta-form input {
-        width: 100%;
-        padding: 15px 30px;
-        border: none;
-        border-radius: 20px;
-    }
-
-    .call-to-action .container .cta-form input::placeholder {
-        text-align: center;
     }
 
     .footer .container .company-info {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
 

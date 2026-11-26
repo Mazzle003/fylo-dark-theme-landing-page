@@ -17,29 +17,29 @@
 <body>
     <main>
         <header>
-            <img src="/assets/images/logo.svg" alt="" srcset="">
+            <img src="/assets/images/logo.svg" alt="" srcset="Company Logo">
             <nav>
                 <ul>
                     <li><a>Features</a></li>
                     <li><a>Team</a></li>
                     <li><a>Sign In</a></li>
                 </ul>
-
-                <img class="mobile-menu" onclick="handleMenuOpen()" src="/assets/images/icon-hamburger.svg" alt="" srcset="">
-                
-                <div class="mobile-menu-content" id="menu">
-                    <div onclick="handleMenuClose()">
-                        <img src="/assets/images/icon-close.svg" alt="" srcset="">
-                    </div>
-                    
-                    <ol>
-                        <li><a>Features</a></li>
-                        <li><a>Team</a></li>
-                        <li><a>Sign In</a></li>
-                    </ol>
-                </div>
-                
             </nav>
+
+            <img id="mobileMenu" class="mobile-menu" onclick="handleMenuOpen()" src="/assets/images/icon-hamburger.svg"
+                alt="Menu Icon" />
+            
+            <div class="mobile-menu-content" id="menu">
+                <div onclick="handleMenuClose()">
+                    <img src="/assets/images/icon-close.svg" alt="" srcset="">
+                </div>
+            
+                <ol>
+                    <li><a>Features</a></li>
+                    <li><a>Team</a></li>
+                    <li><a>Sign In</a></li>
+                </ol>
+            </div>
             
         </header>
         <section class="hero">

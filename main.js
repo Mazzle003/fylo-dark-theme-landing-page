@@ -1,7 +1,14 @@
 function handleMenuOpen() {
-    menu.style.display = 'block'
+  mobileMenu.style.display = "none";
+  menu.style.display = "block";
 }
 
 function handleMenuClose() {
-    menu.style.display = "none";
+  mobileMenu.style.display = "block";
+  menu.style.display = "none";
 }
+
+document.addEventListener("click", (e) => {
+  console.log(e.type);
+  console.log(e.target);
+});
